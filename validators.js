@@ -27,7 +27,7 @@ const showDialog = () => {
   output1.textContent = input1.value;
   output2.textContent = input2.value;
   output3.textContent = input3.value;
-  // setTimeout(dismissDialog, 2500);
+  setTimeout(dismissDialog, 2500);
 }
 
 const dismissDialog = () => {

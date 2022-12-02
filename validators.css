@@ -10,14 +10,22 @@ input {
   border-radius: 10px;
   height: 3rem;
   width: 300px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  padding: 0px 10px;
 }
 
 button {
   border: solid 2px rgb(86, 86, 86);
   border-radius: 10px;
-  height: 2rem;
+  height: 3rem;
   width: 150px;
   margin-top: 2rem;
+  background-color: rgb(159, 194, 128);
+  color: rgb(84, 84, 84);
+  font-size: 1rem;
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .form {
@@ -29,18 +37,6 @@ button {
 
 .bg {
   margin: 10%;
-}
-
-#success {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: minmax(40%, 400px);
-  width: minmax(60%, 400px);
-  border: solid 2px rgb(86, 86, 86);
-  border-radius: 15px;
-  background-color: rgb(159, 194, 128);
-  transition: 500ms ease-out;
 }
 
 .dialogForm {
@@ -57,17 +53,34 @@ button {
   text-align: center;
 }
 
+#dismissButton {
+  background-color: rgb(139, 88, 137);
+  color: rgb(199, 199, 199);
+}
+
+#success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: minmax(40%, 400px);
+  width: minmax(60%, 400px);
+  border: solid 2px rgb(86, 86, 86);
+  border-radius: 15px;
+  background-color: rgb(159, 194, 128);
+  transition: 500ms ease-out;
+}
+
 #success.show::backdrop {
   background: rgba(0, 0, 0, 0.5);
-  animation: backdrop1 500ms ease-out;
+  animation: backdropIn 500ms ease-out;
 }
 
 #success.hide::backdrop {
   background-color: rgba(0, 0, 0, 0);
-  animation: backdrop2 500ms ease-out;
+  animation: backdropOut 500ms ease-out;
 }
 
-@keyframes backdrop1 {
+@keyframes backdropIn {
   0% {
     background: transparent;
   }
@@ -76,7 +89,7 @@ button {
   }
 }
 
-@keyframes backdrop2 {
+@keyframes backdropOut {
   0% {
     background: rgba(0, 0, 0, 0.5);
   }
