@@ -9,9 +9,9 @@ const input3 = document.querySelector('#input3');
 const output1 = document.querySelector('#output1');
 const output2 = document.querySelector('#output2');
 const output3 = document.querySelector('#output3');
-let randomTranslation;
+let randomTranslation = Math.floor(Math.random() * 4);
 
-success.style = 'translate: -100vw';
+success.style = 'transform: translateX(-120vw)';
 submitButton.addEventListener('click', () => showDialog());
 dismissButton.addEventListener('click', () => dismissDialog());
 input1.addEventListener('input', () => validate());
@@ -20,18 +20,28 @@ input3.addEventListener('input', () => validate());
 
 const showDialog = () => {
   success.showModal();
-  success.style = (randomTranslation < 2) ? 'transform: translateX()' : 'transform: translateY()';
+  success.classList.add('show');
+  success.classList.remove('hide');
+  console.log(randomTranslation);
+  success.style = 'transform: translate(0px, 0px)';
   output1.textContent = input1.value;
   output2.textContent = input2.value;
   output3.textContent = input3.value;
-  setTimeout(dismissDialog, 2000);
+  // setTimeout(dismissDialog, 2500);
 }
 
 const dismissDialog = () => {
   const random = Math.floor(Math.random() * 4);
   randomTranslation = random;
   success.style = translations[random];
-  setTimeout(() => success.close(), 600);
+  success.classList.remove('show');
+  success.addEventListener('webkitAnimationEnd', removeEvent)
+  success.classList.add('hide');
+}
+
+const removeEvent = () => {
+  success.removeEventListener('webkitAnimationEnd', removeEvent);
+  success.close();
 }
 
 const validate = () => {

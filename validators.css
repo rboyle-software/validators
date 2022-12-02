@@ -31,7 +31,7 @@ button {
   margin: 10%;
 }
 
-.dialog {
+#success {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,6 +57,30 @@ button {
   text-align: center;
 }
 
-::backdrop {
-  background: none;
+#success.show::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  animation: backdrop1 500ms ease-out;
+}
+
+#success.hide::backdrop {
+  background-color: rgba(0, 0, 0, 0);
+  animation: backdrop2 500ms ease-out;
+}
+
+@keyframes backdrop1 {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes backdrop2 {
+  0% {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    background: transparent;
+  }
 }
