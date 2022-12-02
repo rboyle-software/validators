@@ -22,10 +22,22 @@ button {
   width: 150px;
   margin-top: 2rem;
   background-color: rgb(159, 194, 128);
-  color: rgb(84, 84, 84);
+  color: rgb(86, 86, 86);
   font-size: 1rem;
   font-weight: bold;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: 300ms ease-in;
+}
+
+button:hover {
+  background-color: rgb(202, 243, 166);
+  color: rgb(43, 43, 43);
+}
+
+button:disabled {
+  background-color: rgb(139, 166, 115);
+  color: rgb(141, 141, 141);
+  border-color: rgb(141, 141, 141);
 }
 
 .form {
