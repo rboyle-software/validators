@@ -35,6 +35,6 @@ const validate = () => {
 const translations = [
   "transform: translateX(200%);",
   "transform: translateX(-200%);",
-  "transform: translateY(200%);",
-  "transform: translateY(-200%);"
+  "transform: translateY(280%);",
+  "transform: translateY(-280%);"
 ];
