@@ -40,6 +40,15 @@ button:disabled {
   border-color: rgb(141, 141, 141);
 }
 
+.header {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+  color:rgb(139, 166, 115);
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.534);
+}
+
 .form {
   display: flex;
   flex-direction: column;
