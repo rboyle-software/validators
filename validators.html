@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="validators.css" rel="stylesheet">
+  <script src="validators.js" rel="script" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="bg">
+    <form class="form">
+      <label for="input1">Input 1
+      </label>
+        <input type="text" id="input1" onchange="validate()" placeholder="Please enter text...">
+      <label for="input2">Input 2
+      </label>
+        <input type="text" id="input2" onchange="validate()" placeholder="Please enter text...">
+      <label for="input3">Input 3
+      </label>
+        <input type="text" id="input3" onchange="validate()" placeholder="Please enter text...">
+      <button type="button" onclick="showDialog()" disabled="true" id="submitButton">SUBMIT</button>
+    </form>
+  </div>
+</body>
+
+<dialog class="dialog" id="success">
+  <h1 class="message">SUCCESS MESSAGE!!!</h1>
+  <form method="dialog" class="dialogForm">
+    <h2>Input 1:</h2>
+    <p id="output1"></p>
+    <h2>Input 2:</h2>
+    <p id="output2"></p>
+    <h2>Input 3:</h2>
+    <p id="output3"></p>
+  </form>
+  <button type="button" onclick="dismissDialog()">OKAY!</button>
+</dialog>
+
+</html>

@@ -1,0 +1,59 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(140, 169, 198);
+  overflow: hidden;
+}
+
+input {
+  border: solid 2px rgb(86, 86, 86);
+  border-radius: 10px;
+  height: 3rem;
+  width: 300px;
+}
+
+button {
+  border: solid 2px rgb(86, 86, 86);
+  border-radius: 10px;
+  height: 2rem;
+  width: 150px;
+  margin-top: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.bg {
+  margin: 10%;
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40%;
+  width: 60%;
+  border: solid 2px rgb(86, 86, 86);
+  border-radius: 15px;
+  background-color: rgb(139, 88, 137);
+  transition: 500ms ease-out;
+  transform: translateX(-200%);
+}
+
+.dialogForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
+  place-items: center;
+}
+
+.message {
+  color: rgb(159, 194, 128);
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
